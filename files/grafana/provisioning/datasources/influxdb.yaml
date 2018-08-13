@@ -9,7 +9,8 @@ datasources:
     type: influxdb
     access: proxy
     orgId: 1
+    isDefault: true
     database: sensu
     user: grafana
     password: grafana
-    url: http://localhost:8086
+    url: http://influxdb:8086

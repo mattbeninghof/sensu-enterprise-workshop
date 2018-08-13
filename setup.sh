@@ -58,6 +58,10 @@ sed -i 's/^bind 127.0.0.1/bind 0.0.0.0/' /etc/redis.conf
 sed -i 's/^protected-mode yes/protected-mode no/' /etc/redis.conf
 sed -i 's/^;http_port = 3000/http_port = 4000/' /etc/grafana/grafana.ini
 
+# Add an alias hostname for 127.0.0.1; for shared config between Docker and
+# workflows Vagrant.
+sed -i 's/^127.0.0.1\slocalhost/127.0.0.1       localhost influxdb/' /etc/hosts
+
 # Copy Sensu configuration files
 cp -r /vagrant/files/sensu/* /etc/sensu/
 chmod +x /etc/sensu/plugins/*
