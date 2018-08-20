@@ -1,0 +1,9 @@
+{
+    "type": "Asset",
+    "spec": {
+        "organization": "default",
+        "name": "check_http_1_1",
+        "url": "http://sensu-asset-server/assets/check_http_1_1.tar.gz",
+        "sha512": "1e769bfc05510b8db7ae251cd0de7cfc64c28f52376ae3ff4677aa5fb4553ecf2ecf83aef9a12f177c8d3822728e92f2470de2cdd22b34aabf18fc0803c65bba"
+    }
+}
