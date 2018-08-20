@@ -3,14 +3,13 @@
 # agent configuration
 ##
 backend-url:
-- "ws://127.0.0.1:8081"
+- "ws://sensu-backend:8081"
 organization: "default"
 environment: "default"
 #id: ""
 subscriptions:
 - "docker"
-- "macos"
-
+- "poller"
 
 ##
 # authentication configuration
@@ -31,7 +30,6 @@ disable-api: false
 disable-sockets: false
 socket-host: "127.0.0.1"
 socket-port: 3030
-
 
 ##
 # statsd configuration
