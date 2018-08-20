@@ -9,6 +9,7 @@ services:
     - 8086:8086
     volumes:
     - "./data/influxdb:/var/lib/influxdb"
+    - "./files/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf"
 
   influxdb-init:
     build:
@@ -18,7 +19,7 @@ services:
     - "monitoring"
     depends_on:
     - "influxdb"
-    command: curl -XPOST http://localhost:8086 --data-urlencode "q=CREATE DATABASE sensu"
+    command: "curl -XPOST http://influxdb:8086 --data-urlencode 'q=CREATE DATABASE sensu'"
 
   grafana:
     image: "grafana/grafana:latest"
